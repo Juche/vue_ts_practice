@@ -3,9 +3,10 @@
 > [仓库地址](https://gitee.com/juching/vue_ts_practice.git)
 
 ```sh
-# Git 全局设置:
-git config --global user.name "Juching"
-git config --global user.email "azhucheng1@qq.com"
+# Git 全局设置: `git config --global xxx`
+# 项目设置仓库用户信息
+git config user.name "Juching"
+git config user.email "azhucheng1@qq.com"
 
 # 创建 git 仓库:
 mkdir vue_ts_practice
