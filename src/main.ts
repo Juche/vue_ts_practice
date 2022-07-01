@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import Model from './Model.vue'
 
-// NOTE: [基础.01][创建一个应用](https://staging-cn.vuejs.org/guide/essentials/application.html)
+// NOTE: [基础.01][创建一个应用]
 const app = createApp(App)  // App 作为根组件
 
 // 应用实例会暴露一个 .config 对象允许我们配置一些应用级的选项
