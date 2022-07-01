@@ -7,7 +7,7 @@
   <button @click="toggleState">toggleState</button>
   <!-- 动态绑定多个 Attribute -->
   <div v-bind="attrs">我是一个方块快</div>
-  <h2>3. 指令</h2>
+  <h2>3. 动态指令</h2>
   <div :title="evType" :[attrName]="attrVal" @[evType]="enHandle">我绑定了动态属性</div>
   <button @click="changeEvType">我修改动态属性</button>
 </template>
