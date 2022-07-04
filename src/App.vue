@@ -14,6 +14,13 @@
   <h3>原生</h3>
   <input type="text" v-model="value2" />
   <text>{{ value2 }}</text>
+
+  <V205>
+    <!-- <template #header> new header </template>
+    <template #content> new content </template>
+    <template #footer> new footer </template> -->
+    <template #[slotName]>我是动态 {{ slotName }}</template>
+  </V205>
 </template>
 
 <script lang="ts" setup>
@@ -21,6 +28,7 @@
   import V102 from './components/V102.vue';
   import V203 from './components/V203.vue';
   import V203_2 from './components/V203_2.vue';
+  import V205 from './components/V205.vue';
 
   // const v203 = reactive({
   //   value1: '1些文字',
@@ -43,6 +51,24 @@
   // 直接使用 v203.value1.value
   // 这里解构出来的数据是响应性的
   let { value2 } = v203;
+
+  let count = -1;
+  let slotName = ref('');
+  const slots = ['header', 'content', 'footer'];
+  function switchSlotName() {
+    count++;
+    slotName.value = slots[count % 3];
+    console.log(count);
+  }
+  function si(fn: Function, delay: number) {
+    fn();
+    let timer = setTimeout(() => {
+      // slotName.value = 'content';
+      clearTimeout(timer);
+      si(fn, delay);
+    }, delay);
+  }
+  si(switchSlotName, 3000);
 </script>
 
 <style scoped></style>
