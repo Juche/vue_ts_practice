@@ -21,6 +21,7 @@
     <template #footer> new footer </template> -->
     <template #[slotName]>我是动态 {{ slotName }}</template>
   </V205>
+  <V206 />
 </template>
 
 <script lang="ts" setup>
@@ -29,6 +30,7 @@
   import V203 from './components/V203.vue';
   import V203_2 from './components/V203_2.vue';
   import V205 from './components/V205.vue';
+  import V206 from './components/V206.vue';
 
   // const v203 = reactive({
   //   value1: '1些文字',
