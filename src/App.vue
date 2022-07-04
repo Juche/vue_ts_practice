@@ -3,13 +3,15 @@
   <!-- <V102 /> -->
   <!-- 这里的 lazy 修饰符也不生效 -->
   <V203 v-model.lazy="v203.value1.value" />
-  <br />
+  <V203_2 v-model.lazy="v203.value1.value" />
+  <h3>原生</h3>
   <!-- 这里的 lazy 修饰符生效 -->
   <input type="text" v-model.lazy="v203.value1.value" />
   <text>{{ v203.value1.value }}</text>
 
   <V203 v-model="value2" />
-  <br />
+  <V203_2 v-model="value2" />
+  <h3>原生</h3>
   <input type="text" v-model="value2" />
   <text>{{ value2 }}</text>
 </template>
@@ -18,6 +20,7 @@
   import { reactive, ref } from 'vue';
   import V102 from './components/V102.vue';
   import V203 from './components/V203.vue';
+  import V203_2 from './components/V203_2.vue';
 
   // const v203 = reactive({
   //   value1: '1些文字',

@@ -1,5 +1,5 @@
 <template>
-  <h1>[深入组件.03] [事件]</h1>
+  <h3>[深入组件.03] [事件]</h3>
   <input type="text" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
   <text>{{ modelValue }}</text>
 </template>

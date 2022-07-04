@@ -1,14 +1,14 @@
 <template>
-  <h1>[基础.02] [模板语法]</h1>
-  <h2>1. “Mustache”语法</h2>
+  <h3>[基础.02] [模板语法] 1</h3>
+  <h5>1. “Mustache”语法</h5>
   <p>{{ user.name }} - {{ user.age }} - {{ user?.fav ?? '无' }}</p>
-  <h2>2. Attribute 绑定</h2>
+  <h5>2. Attribute 绑定</h5>
   <!-- Attribute 绑定 -->
   <button :disabled="disabled">按钮</button>
   <button @click="toggleState">toggleState</button>
   <!-- 动态绑定多个 Attribute -->
   <div v-bind="attrs">我是一个方块快</div>
-  <h2>3. 动态指令</h2>
+  <h5>3. 动态指令</h5>
   <div :title="evType" :[attrName]="attrVal" @[evType]="enHandle">我绑定了动态属性</div>
   <button @click="changeEvType">我修改动态属性</button>
 </template>
