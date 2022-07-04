@@ -1,4 +1,5 @@
 <template>
+  <h1>[基础.02] [模板语法]</h1>
   <h2>1. “Mustache”语法</h2>
   <p>{{ user.name }} - {{ user.age }} - {{ user?.fav ?? '无' }}</p>
   <h2>2. Attribute 绑定</h2>
