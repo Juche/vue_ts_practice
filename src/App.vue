@@ -1,6 +1,15 @@
 <template>
-  <!-- <h1>App Header</h1> -->
-  <!-- <V102 /> -->
+  <h1>App Demos</h1>
+
+  <V301 />
+  <V206 />
+  <V205>
+    <!-- <template #header> new header </template>
+    <template #content> new content </template>
+    <template #footer> new footer </template> -->
+    <template #[slotName]>我是动态 {{ slotName }}</template>
+  </V205>
+
   <!-- 这里的 lazy 修饰符也不生效 -->
   <V203 v-model.lazy="v203.value1.value" />
   <V203_2 v-model.lazy="v203.value1.value" />
@@ -14,15 +23,7 @@
   <h3>原生</h3>
   <input type="text" v-model="value2" />
   <text>{{ value2 }}</text>
-
-  <V205>
-    <!-- <template #header> new header </template>
-    <template #content> new content </template>
-    <template #footer> new footer </template> -->
-    <template #[slotName]>我是动态 {{ slotName }}</template>
-  </V205>
-  <V206 />
-  <V301 />
+  <V102 />
 </template>
 
 <script lang="ts" setup>

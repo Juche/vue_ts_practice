@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { getMousePos } from '../utils/mouse.ts';
+  import { getMousePos } from '../utils/mouse';
   const { x, y } = getMousePos();
 </script>
 
