@@ -1,0 +1,711 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=bar-background&code=MYewdgzgLgBAkqMBZAhgSzDAvAWAFAwwDkaAtigOYCmAXAPR0AmKUKNZlVdADmBQNwAjFBCoA2ACwAaNADUAQgHkASgHcADAGkA4hRABBQ_oByAZQCqACwCi5ikYDCEo_ogP9ATRcpgHkAA4XBwANeTgAdWCkQ3kPABsjcIApAEUAMSTzNAAVVRd9YLNldTh9ACcICWAxFJdlMBTzAEZ5QwcADwArVQA3fw9Go00AMwtleVkACQp5JoAtOOVBKG59azhBOlR1gEcU_wBWcvUlc0nGbnaUKkV1g5TGOGy4pIkKAHYU8jAd-QOUbgAETE1kmOwc6ksAAVrMoxPJTE0UpZsu8AMymbT6ByTbTGChQKgeOjGJIAaxQAE8mj1hmSAJyKOg9HrvfRwcymQFUFCAuIHSbDSn02pwUwOKhIKFoqFlNJonb0xhIA5QcJfNBICTceSAyxwMo7JrWYxNFDGazGuhJUhwQEAanZgIkByS1k0ACZgACelDhvpuJNFPJGIodpM0dpzPS0gAZcJkj1UYYecydMDlYKU5GkKF0dRJemdCDAYIQODyABeIFMZRQDhQ_jRdBAFH8EnMse4aOslMUjGAjHaSUb2W4xkEku4ZKgDm0wXU9uUmkWlLQcVk7UUZPUUAklhAUI8EDKw1RSVUO20O2spBScXpVChwHpHrJSXUHiQ9MmkyeaPeDwegAVwcKB_WAugPTAQEmkmHpKS6MBYyQTQkC8Ug0M6bRgHtQQkB6elsluNJlAHRQQG4axrDEBxuCgNJ5E0NJJjXMQoDQUxFFUMluAkHZGG0eZwnUcwDggWM0iaKADjEd4pPCOBYx2D15GsCB3kBOADjgKBjE0esDn8FlkiDJiPGAQRgk0fw5neMlJU6Sw0WUNJrChKB9DEOzZEpYJLGMYxASSOIFUBNBKXMfQ0XMYJskECAIG0KEHHCMQPUEcxzGsdRlA8FAmmUOJ7R6YwPRAWRuB2CgemCStjHkUjrFqppI3ee0yVUbRrFjF4dm4CA7BQJIHCaBxgDKCg4i2Mo0GMFBLEBYAqDgdRgjEVQPW4OYUA9Swdi07JZFkdQyTRbgPB2HoHDKKhBGAwQ4necg4lIWNSGUFBNAcYCyUpNJ9CoFJsmyeQNEEOYA2CQQDkYSwxB2JAySaWNjEmEA0EmXgoFkbQQFIRRSE6JiUgcOZSB2Ss6BeJor1UHKxH5SY70YQQoU0awX2AHpTA9NJzGcLSJHA4ZgO0dRtqQSkIHkJJgLXNAxEUSZgM7UxjGDdphmV4DZChNJTH3WQqEsCz6UrJJXWURRhlIKVGGsRRKXeMQUGsCRtHCe1GFUOBJjAXJ7UsCQyXkToJDiVRAUYbJtDRMROntFJ6Q0qFJggJJlDjuYqB6cx_HMYwoDvdQDkEVHLE0RQkGMbTAUpMkHEYcxsiSMoyTocIKB2YxgDoKEUjKMB7WGCAoQoFIxEYKFgmsSskDhbQpTKOAdggdoUkme1glkasoTE-1uGOkCDkBEphnpEBGB6FBGDAEAlyrJpK3UYBYboMlvMsYBm3tCg6CgO8Km6NKzKAcJ0fIstlBiWsO3JIFAEFYCwEQfg-BEDQHgIgKEGMwCEjKNgfAhAiDcBYJYegWwPQADp6RSHUJQ94sYqE0Loe8YATRKHSHUFIKhYgpDsI9NwyhvCeE9CaE0A4wAuHsIkAAWn4YIsQMieEKLiFw1-ciOG0KUUIjRHptGKJ4bINElC0QQhMXw6hFjOH0MEcw-hlYUFoPABghA4BwggCHgQggxAODUHIcwVg7ByDUB4HwIQIhxDSDkEoNQWhdAGCMGYKwth7CGEBC4eQSB3BeCMGUCQnRk75EKKYYopQKhVBqG0ZQlhM7WH5m7Dy4QmjASQJMTmetBCMG8mARgHoejAE_tYTobTsiWHaHAdo1gtTWDWGgFIFBvryHkP4eQUIyT6HCA4CgZR9TKC0nANA_96TAXeEgd4xgQDhDAItCAYBBzAWwsodkIBNApGdFABAwA4Ds0BHQfUEhWgQDJLUFIag4hwFDmSawaBgASAcNkQE7QyidD6e8EAwEdjATEMBNEWKPDDCaMRSsDhlD2nUHMJATQPRNEENBd4OxSBiHpPSFAnRKQSFMMAQESodir0YJoKEPQ0isvvBQcwkV_rDC1nEUedAKCMEYO8OYkwBWGEULDYYmhTBoljHACy-goQSAtqQKASRBDyBgk0RQMluCcUrKQcwSA0QKh2aYYCwEPQXOgEGMASRASAg8LoTQVLLDKCoFQCwwQUCyCCqoX16gQ7ZB3g4beSBfJlDiIweQwEDj0ljEkYw2hSVoggMYMoe5nzZH8E-YI_gyj51UL5HCihYxoHpFAJAFAPBon5MBDw_htD0issYSkucHpxC7GANIFBshIEBMYNZNxgjaDmBAD04USUhmMBIfw417CVgoMEYIhJtCqFjIIOAKQwDqGyLKfQYBShakBIIUg2RrAhlILIOAaJJgJUrO8QQyBlTDHeEqvw6hFCqK7GUbQoK4VJF8hIDw1gDgUHQFfYC9JhiVmCvaRsYADjvCPLGUwpA5hiHCEgc1wF1BxH5A4KWlhn5SgkGAd4wxVDsvCAPKEsgTlJBXKYCAaBlBJB6JWbVQ7LDvAONke0_h6SN1kLWfw7wHAQHCMoYwKRZAeg8KoQIYqHDB3kCy5wshepiG5cMTpIBO5NDiBID0PgoArJHMEPJKQUiZwHhp8IHh5BomyGu1wBNFDIc0NwcIjBywMWsPSDocwUggEBNOQQnQyj6DC4GtIycqBoBQGkKAgIQC_rBmybQYgEogBHFypIhNlMQDw7HOY2h5DGGHIIbQYBuBUDKIwKAaIqCuH0GSUg2hNCUk0JoCg2lsiRfUE0O8PQsmKErIIWQ_hsgenOIwA4UImnnHCFTNEghNBoDgOu0DEsqDZk9SkOAmgqDqDRATWQcQf7QErHATo1gwIXKgLGADDt6at2_J0XrYcdjBC-NwfwaAz1ZtUKFA4TQ6Bok4rIUglhYOaEYLzCoHpKRmsnP4CgYAUBQlIJMekUIqSfziO0YIBs6CT2AmUA4ZRn3GAcA4VQJyySAnkB6FI0M4BxEsB6YYsZ9CKD7Y29oshyPqWMJWdopgUgTUI4eQE4RBAvw9Lj3yxgPDKHpHEKgwBKSkAgP4E14p1DhDSGkBG3RFBJDEF0KmlJ4xQDoPadKD2EhYYdNwQSKRtCVhVf4X9VAIxiB5-8XTEhYzZHUO8JI-h6RiA16YekwRFCaBAHCYqFB2g9Dnn9NIqhgAwiXk6paKROgOGMJCc4PR2jsuCGgbQiICNiChEkS22QdhUCOrTYwYAmywaSLGFNMf-0eErKDBw1g0T0h5igT2qh0AfcmB6WGltLBjcYEkNEjVFBlEfD0N0Dg0DBChKoTQsYQDnOR2Sa8UIIDqAcGAQQW449aVTRX1wh_NwgI4dgoAKAzki17RJhNd5oHt_ogFJhzBjZTAPAyhlB4dggPR2hkdCIJBhhWARN9Io80htBAQkALZrdgJ7RZJ5p1Av9ycft_9Qo1B5Bi9LAUVxo0B5AnwdhP5fZJB3tM8PAphR93s5hhhtA4A1MDNPA4B-h1JghVBKwdhZBGAHAdgPBARZBwhiZbAQ56Q5hFRYwIBrBRl1B4QyhFx5NYwJA0hggeh-p3hsg0R6ZJgDhtAqAKBxwJBjBOgmgDJsJoxlAhMyhsgJAXtXAehz0AjBt2hnQAR5AoBTAoRiogp6xtBJhTNFAX0hdNBuYegKNgIx5GQh1ghJhO9uJQws8JB3dBAKAmhzlPdYwc9FBghlBBtrBgJNADgsdgIWgmgOxjBPBsgUxKwLZT55BLBghmkkh8x1Ayh25hgKCQA0gr9ZZnIKAoQX5eU0Ar52gmhGBbD7RTBKx_BYx2guU85eRVAU9Stx4ehSBKRkM7woBlBshV4KB6Q0AdBtBuAKooAzsoApcoAygohGAdg0h-iRAI9t1817Q5gmhpQAxVoAo0QRBFwDhFB1BJ4Dgooyh2gGBVBJl_A3VSBBBHpKRVA0BhgZ0ft9BQw0hLBFA_9blTotp2tVAkh3hJgHBUc4AkhZ0h5rAPRFA0B7QhkUAeg0Am5VBjASNSA-ZOh2ooBNBVAKJ6RlAehZB3g6BOhAR6w0h3CehVBbc6AZCEA4hKcxAOoPRsg6BhA4hPYUg0Boc8Nwg15O4QB1BYi4hgQkgoQ3xYxgx7QPAkht4YU5g5hNA4AxAKA0BYwfh5BtAnMqBfsegKBQ4-j6QKAL1rBZA09m8BhBB1BcEvoqBzBGACgPR31yNFhgI1kUB9BTAjRr4s9tIiS4hTBwVT1gt5AmcdgNsDgelJgkhgh9BmZJg5g0gPB_SAMuRARzBVAUsPRPUWI8dlJ_APR3hlBKRtMdkJAcp7RwhO9gJgYOV1BbQi56JVA6BshaRhg9N_AkAPtzBNBZAmg1zPVLBuBKRhgJBgg7NihmU5gyhgBAIwBI8CsqA9cwAgikgkB7QqB4VFB9BKRKQYQDhSA6B5BlBwgIBIM1t2g5gMBSJhhd0O5ZBLBr5lBZM0h6Q4BSA_pTA-wuoXRsgHBZAFoJAUhHo0R7QcIegFh2goRYxKQJZJxxAXtSBddBQ2NTB1dTBq8TyPAJAmhJd9Bhh9pLB8zvSoRARVBhhfgmgPAPQZJZgDgkAxB8VSAKA0RbpC0zV55jBZBghhgDhmps1lA5hHYKBdVFAhLtBSBhhgA0gps6BrkoRgIeYyQY9zBTLNBlA0Q4j_d0g1Cw5gilRTAQAGSUBmcehBBUsBYyRgJC0SFW4yhVA41Oh4RrBVFsce4t4UgyRzBDUUBcRyUPBkh1BZAwAbokgPACt1BKd5AJy6BlBJhEVjAdhdzE5kRPy4hVz0tlLFA5h7QkA0BuAHV3YIBLBN4xBCKdh1AHR3TxUpKUhWExzZ4CttNFBshGBsdn9SB1Bqj6RKROg-NgJYwgYp9tBUhVBBTgJVAkBhkkA1Jhh6tbLgh8kXYrg5gyIr9NBAN_BWwIB6RUKdhq4XRzAIBgIUA4ReKxBshzAaNZA0A0RRgxq8wJscaNoUhUKUpjAxB9A6BgI217wj5FBad9BOhNBzB5BuACxKxiDTt3DHLshYx4Zvr7REY5hqBghM1_BPR3gJACYKBFid45h9skBSB9BKxppgJKwIAdgUAwBxE5T9BtA84SqDgdhlBwQxAuUjx7RyA3AxzoJhaxA0RQC_IHBzABg2E4h5Bhh7QEzTrJhKx9AKAIA4gq1dd6R2gSFSAMVkB0UqA4gztflZNWVZBFA2si9hh5AIN0toSKB_pXBIayRqB6gBVvlG0cdLB8LSBgBeB3gKBKxwhFBARTA5hBBR4ZZhsHBTAegPRcwhNhh1ACdwhARxJCLNTgBAZPZshwhrBqoHBARrpv99BRkg1la5gqD2g0hBc4Boj5lml-gegJy4goApkwBjA0BxMpzEyvCKAJA_ZzUYYUVrAPdOg5hIxBINjYwdIooS64hOgqAyQ5gZ4Y7uA8ZKw0huA9U6BgA8pdcTKCzPidgUQ4hwh_BksmhKRuBggnhxt_Az5pCZVgAh8PR55SBEL2gcavhYxJhcpuB3hOgpIGjiKbITxFgIBOkJAYR2h3h2htB7RgrKQ4g0gy1OwEgyQZwyRBBeZsh6Qa57TRKY1pS-gegPAfZYxEq5gKRuRq1jA0hgAdgwBVBGAQBx77CoQkAKqxAyQ_9CRzBTUoQ3VzcyR2gPRwgPRK6MLqxdUO9OhFBuAE4B7pgN6cZBBfY6KygQAXR5JgJkIHkk9NArS0gRdtAM05gehLB_A_QTBNjgB6oyK8Zv98KzUxMxyQBKQ-7ATl8ps96AiDhYwzrghOhVdtA4g0A2UqBGBw5FBgBLADhNBJhVBlwwAE72i6BeqypBAPBFAoRGAtalkzxZAXk580QT6UgehOhKx0x9BjLa4gKkAQAoB6Qx6vKkBl0NqCN5TGi0QxyVimgB0PQ7G0hXQDg0BgIAxVAhKyxtBOjYwD12S_5GAS66BtDtIZ45puBLBfDBpszgJ-QOr_BgBkA4BKwmhtB2hJRtxGB9MWKPAvDmJSBAtY7TAxBghgBMM4g4aDguB_ACMgVH77ROhPyX19b8RKxgAHtgt_BVBJ5Yx7QdrTB7QzUnZFRagjAoEYE4EEEKAkFHE8B8AGAYB0FYADx2cIBsAYAABtIgKlIgKQYgJoC14gD0G1ogNEe1iQe1g4e1sQe194e1_we1-ke1podQP161gAXVQTwG1e4FuigA4j6xkUOXvluicUgFgAtx6CzqNeNcIUIGIBkXtZzctaIEADl5C1zNohQAWjl7XAANrKIHwBDfwETYwQCRQHTczeNYERgH9ctf9aDakBbbbbEU7YOG7ZbbREta4RgA9HUCHe8WNZHfbctbREnZ7endnf8EteiKncIBnc7aaDXcHaXc3ekBgDoTbbEEXZbcPZ3ZgHeDPencPYOEtf8BvYPctZoRgHpBvdrbwEog4nACNYAG9M25SCaUA4hUBuAaAYAAPvFCBtWoASHaBiBEAOIwBgJ0UIBi3oOYADqQBVAIPhgQPRB92s3SAMAIOuES2YByB2gIP_XyPMPGAyAqBIBDiwAIOBEKPtWPE0AmOoAIOiADxZpqxKy4gMOs2YBZoKBLBeP226OxOoBKI-PlpcE-tROs3CR2hpPTXJh7XYwiAN2s3vQPsMWUBHoEOITgIqAiPCAMBPo-AEOoOxOYO6AdWQA4gPEIPTWABidQcK-1zz8KgN_N_z9QANoNijwgUANzsoDzogbz6evz4YeLoL6e0LqzmAAAXyI8y8zfk9c44nA8g44-c6BOEx_dY-IHk-4FU8IAhMOWoGi58UJFIGq5gG1cbYg4c6ze1cIAgGt0EFc-UGuZYAQ_9aK4y6y6I6BNtIa868IDrAY7KI87HaIEOAAFI9OJvM2Lappht2g0AIAOuxu4Pes-OOJSAqAWvjuEOiAb44gLOWvYP4PFPhu9AyhKQHvnP2uYB9WKg0uSPyvZPiOUBqP232PMP-v0nmA3vtAAQ8OCPLOKOIBuABnAcMB7PwusODxcOYB8O4hCOKPsvMPgf9vW0wB0fMOeuse4e8eEfMPCexPieIBsgYUyRDuKfMecPqf8e6e0vGfYwTOs62fHOOfsfcfufhftXknWBCQIOXQCfNvvF5uAWIB9A9uDvCvMOrvnvCRXv3u0uvuU2s7ee1fSfyfhfsPRf4e0v6es2-eBe4ghfHOLeufaeJfnOpfhvZeDh5eKPGfmeBlHexPnecereffvEbfRBZoqB1eM3MPZus2Kdzu-PAA300AHyUwACwjAANtxa5q6e-IDQ2AmoBz_E9vmV74_pAOHW7S569YHLXvR24g_fer5gCY9rL4Atwg6UWveb_-7I57-B5o7B_N-R7QD0mAipL60H-b-ADc4GTpNEAg_M9d8c757R8D8c-1eD7F8s6c5gEAFg5QAX4DAAEO0AA3lQAJyCMfCABmyfTA4OO-NfhexO6SBsyE53L-DPXP3OTXjXL2iBJphAAAFJpUtYeg0Qh7UAWohMQABKPTvp2F428xOCArNkjxR6m91-YnC3HwCgCv8qUzfQgAx2gAW1lobHVdu_2v4Ro7-ZvR_hF0_4NdYuCqRgMXyf5oAX-bHPAeNwx5IDCAdvScA7wf6P9hg4ANImgErAjdeE7_AgawDuQIcZEC7dgR7xl4wAZELodgYILKDkAo2k_HHuk2ABlcYAAA27hZygH8DqB9JfQYYKoDYAkER7YwfH2oGRt2cmAIgBq2oGEB0u7_OblQCgCOCYAFgmAPaGIAuDH-XAjgezz94s90BWbSQUQIQ5ogh-j_cgbfxkZUDqBkXL_vQIVRMDQh8A5vkCQwB4JIhlPTniHxp7N8QhRAgToUJF4u8yhzfRgF4N3xVCt-ofdnoQAjaW59uLHGjrUIx5fdY-1AuwY5wsF993-IQuAdkKzaDDE-13QANZGgAeeNAA4MaAAIlOL5a98-KAQvhd2b5G1c4gvGTs3yV6LdiAa3YvoQLr7t8EOTfDHq33r738u-gPMTr3yPb98QeuAjHhbQ4BldF-ZQCzs321YfCNBLHawCIAwAUA-O5AlAGUGL4AiWAQIkEXwHMBh5PexAHkMJj4DQiwAnwljoCHZywjwAEHBdiF2b4wiyu3IW0pSBGFhDMRgI8AGSKpCIiAkCHB4QZ1n6dR9uZnH4cvwZ4m81-Jgp3lTxKHi9HOIQlAaPzQF8ig-Ao7fj0LCFq9_erPCUcgKlEtCch7wk3vbyaHKjShnA3ITggKGKjrOiACDq4jADYJ8hfWdgc_2wFsCyBTHAkK_zNYhcq-7_Tjol1ECzgeOWg41st38DrdxhYnUflQFIBJD7-gwsTmkLoH_8AB6UEAWANjFNAYB7AkIeULuSVCDR1QmAEv3YHCZRBEHR9tmKx76B-uqbb4b8Pf4wp8RmCcAKgAwDsDN-hY4sQh2lEujnO-VUeF4IlDKcGu3o_NrIMr4bcWxWHEQQh3iFu8YADkKgKsCR6W5pOWYnUb0IaHrhNRxQ5sa0JgDtDgAnQysTu3nHs9YOo_UMRj264wA2x7ozsfqJ7HEAF2foo8c5xCF9D3-YYrNsMOeGjDm-4wpAYMLWFEACaf-A1lAGL6HCY-RAdQFX2OH9j_RrXZzmcM8gXDG-zI3fhAA8TSdIeyYNHowD-HOcgxyLEEer0GHHjBBjLdXkQBiHQAPE1bPcXeOb62leBVQiMXx284hcsh_XfrH1nCAsDrRMAe9oOPU5QBOCrEsoA4FoEMTEuwwLIbByoAad-J9QsoOxNYHjs6xrYt0V4I86Ej52k7QcWoI0H6jRYdyPQQAJIR1hSAtgwcYQBvj4J6h9ESwEa0MkoBSAlCCEuGjpzYC4AYAQQZQkwH2jQ21A48WYIAGWTsBVgrAOOxMlrjjxng7wZ4kLZBCxxbglvjTxgB-SAp1kpBMFLRChSfJznMTg4KinltvJj_Y8el3imiBEpwwfQclKCkwAJAGUgqVlKzY5SnBVbfKbFIy6mTxOXgnwc4Oakb87xu44XoGODGUCqhLEmSXJM4mjiepMAEaX1myB58iAdjTQYwJlHC9DeePDzo-JCGEAnx1nJriGJSGuD6JxATzowCwzU1HW7AtwRdJgA0S9h20-qUN0UFEApB1AXBAVhE5XTNpEw4XndIGl7Sqh4Y4SUdJOnDAzpWQy6R4Oukaj0x2Uh6dd2ek8c3pYMr6cKPYE_TdpQ06GR_yi4MTgZoMj6VdJul8C7pc3WGad224IyQOSMmgdjKOmvwxJ-Mt8Y-Ihm_SMZxMlzjTNi7hUqKluJGZ9Kv5Qy2ZCguGeTNemUyrp1M9If50kS8ykxqM5mejOSH_SsZks4YDC3UA8yGZa4_mbRMxkkzpewsuzqLPekQzd-JXUfl0Iq6UQqZUEmANEOkE0ciRJs9mSrKYmazqBYwuoSwDYAwAAA-r-PdFNAABUA63mly_FzTfx90CoABIOGl8jhprUCV6wgnUSBZ7_ZodqPZ4hDcud9HasuMt7pzVR7PFmYrPTGHSnpdYSAIZJ47MSPEMkoSRzP86Jdq5Aksaa_wmlidppkROaQtMJBLS-pjnL7n7PSbuiPQQckORRzDkndiAtqLYRj2EyYDZxnImOQt2AknD827YP0ZhKw619YJDfLiQhO-72M-s96LEZWNXHC8SRFss-ZNMOlk9VALfcZpCKgAQBKE2yAEJYBhSUJTekI_JqXx44ADL2Y7Mdpe36GTStpJ45SdJzHalz_-KAf-ae1jG8Jx2HoVdjYKIDIzd-YC08SpKPbmJnZkYgsrAqaDwLx28cEAcgtHaUJFsMA9BTbMwUQKyOliPBXxxgVwKx2oAxBRuRQUJi0FIQ48dqz_bgL2xkCy1tAoIUACPQKg9ttEQHYALqFvCuqfwsEXuiGFs7URYAIkX3spFQC1HBQu4U0K-FznARVgsgWMK1FsCjRZ22kXtsdF7bORZvKDbByMehM8UU-LTlCjEBnswJL7OnmBzHFPPceRj2_HTzTh64HjqWK5H1TY5wE99mBKID0gmgG82edvNuEIcDg-8g8Km0yzUi8R5XK-RgJTlri3FES8Gez2cW8jXFWo9xVm3vFeyIOPs6eSPL8UeKAl7PIJdxxCXzzwlS8sviaxW6-ivW7wRJaUoKXUCily0xzmUrJ65yahfcsTgPIaWjyw-YnCedd2CXN855YSzMYvPeHZKvhgo4pSX2XkxcDgEgWJQcDRBDKVpIyx_mMtmVZtJl-0yUSuJVEozehtS7xdxzRCLL_FmHfhWN0IDTC-OpbQAC-pgAeudAARvqAA_tQ-5qc5pay_5Ycp6Wms3mZypOQitlIYxGA_PXgYoEyW2kCueS2hQfMyXHyaRuSl5RgsSkKzDxvyuqQCo8QvR1-4U5WXQM86PszmgIO1ml2ZWEAO5dcyWWiGdAegxA3rBFW4IRVIDjxhMplXSpgDxtGVfInlRmMJVKqzZeyogEpzwQUSxOzKyVbKuwmWBcJMqm5QKLnG0rH-vEv6YqtlVidBBuCUwMOL44LsYV1Au1WqHyySdpORAfrpmm1VdcbVrU81YgIlXcq6pDy41WJ3lUgcI1_I55TTzFWBqdVdUvVVEPeU_9O2Gaudlmp3Y5qwu5qz8YErmnJhhgM4zlCwC1XN9AVxAQAEyugAd4dAAyraAAyvUAChsYAHALYvqABrkYBhu7FaAEGL45TdIRxfbVqXOC6BdbxWHPrq5wdW5jtBekljuYJA41Sk19UjqZ4lu6tsg2MAAAFTjtupu_eRZmJAB5cc5iogiQyvLVaDdJughdQZMhF2SIAy6_1R_0gCucqAHk1sAAIAAGgAXg3AAAXswAAAfuuPvU24v1lrWyTbigETrspa6zAAAJg2OdINz8iwZuv8GIaxOaC0AKQBI5PzEpmAH7uh3Q2UTH-hG41shsoSoamgQbLdfaAw1Zs0F-Va6bsJE7EaWpGAljeRtA0oaQOFnb0TRvo1QD91RKw9ZnOPXZyCuT4vlYDL_5iKIBsYthXINsVNzRpHEnAYpJx4XrNBdAv9igAAA-umoqelz_bAADNwAdLul3EnOctJl6nTSgHS4AAeQQPgjoAAA-ZPsCo67ma_VwvGzdpog53qjJj67AK5sxkjrnEb6j9RQAAHEJuNNrZDdBq1ntTIp8Gp2UQAc3cAt5yQrAAACICByPKkHhwtztB-AwwYrTIgY63Qb1lY5JqoH4AwAQOcbWNk1wg6aq-s_AcgJNAwAyJ-uUbfGDQAOCXActrmtBXRqS1EInNWWi3Llv67tAZEOY0ERBw7k9aQAJWq0a3IlglaUWhyKTmx023hIBk2ydFD0gg5jqhANcrQYNvaBYdXOLAmAA3OGDnaBJMiICRBzSWrd-Aw2hzc6RG1sbXBE2wQFNqoC5bOtSZMADIgtzEEIOYgS4J9t-1jb_tbQ7jZQkj7cdS0dkywQjsR3paft327gPDrS0ZagduWt1fNsdWg9Ydmm3BDIlUAerdtcqi9XEHq2HTPOYgNncNqbV8c_t_28Nsjqo20anZFG1DR6AF3jbiAeOgnWLvS2ZboA2WnLaTpzEjctoJWqnVABp107pOUapnUwvu1s6xAw2jzVzqx3_ahdvGqgD_1F2I6bZZG03Xd3N3UbLd2OiXT5sf5CbGZGczxd7MbabyL5tIrOoVrnXVb4NLA9oE-spUNTEpQ4HdVxOE3at3BPywgFO3S6ht8A16vQYPMgBeDfF_AiPSAq2kY9xm64U4kx3Wlri7phezNLdHK557XBbMgFRjr45FtxZBnd-ZXpL0msnZyyzvY5yrVEBy2ze4XhXuL3V7u9300fY_xfE7ixd_23vVWwH3BD59YnSCf9r5mOdl9rypLevo9lLLJhBe1vcPtL0DCIZQ-qvYfsR116dW--0_R3un277b94Yq_e3pr1W6u99-ifWbu6Hj7mlb-xPYvpoXUD193-_7VvvfFjy4-e-ovdfuf137_tJ-p_U7Iv296HNE7VbrGB6jWyIuj-kfW_ov2RqG9trUCWgdjBKC95qB9A3_swOQH4DP-mAy_uoGT6KDPe_A0QFc3vaiDGBhfV_pgCAHODt-ngyUuAOyyMeH40ORAbb3YGj9SWuAxIfP3d7pDZ-ug7gZb1UGZDdB1_Woff127P9NBgQxoe4N_7V9S-5vavpAPCGwDie0NvHtT06D09_srwY0v4G6tktRrW-TAHKB1hKQAA_wG7u8ROGBp_7CjvIZv1j61xQR6A-ocR1hHu9ShqIzQaUNicGDXBww2vvn3JGeDn0yCUgP07J7M2kbShMMHXBxAABA0nwxFJ8GRtLDdbPAGnoXX1LuO2ezrrnpaXC9Ejhc6lY8oT6M6lZ4W-uSlyRk3yqAd8y3IavLTPzX5yLD-V_JgxK8_5AC0dpmvCOOcjF9C54Trtk2ACiFimjheQtQX_6ljSi7BXQlUUyaWFmxhBWQpQV0IqFPC5vcsaEUMLX2Zi1hecaQVcK7FTsxRcYr75rGWFFirRTItHbvGxdnxlY0cZEUnG5NkikYtooAWUI9FyRkE_cZwWPGIT6iqE1YvESXt4TV0hxUIY9077P2Vh6ozYdqMLKapFuWAI23cPptP2hANQYuvwRoAjW6gerUyYc0wB_ArJ-0PaCfV-SmTq3cdpVPUBh7bZXs9w5Qm4BlFLAAAp8VWuKP-DbFDkmsLVz4DfL6DH-8dtxLXFFyaVM-ro7rJ-NiL_Aq7EYgIiaD0h3gtCShd4Zlnu74BpR6pcVMsGDCqTKxCU1KZlPv85TTJgIQmKVO39ZoqpppZoYs57b2BOpjo5Gv1NsynjaiWhLQkTEQzPpyYh0-KvD65G4Nop1gO4cqOatiT8639nUaoBfLyTXgrM62RWI0n8p9JgwZCMSnMnWTMAdk7Ry5M8m-RfJmAAKY9BCmRTrpsoO6YOqem1x3phU36fk4BnQRapkMyOK1OmD2jSsrXUrIln4LBA_84VXwib4H5NFx7RM0luTNlDUzGXJ04qL7MDnpTsp_A_Kd9NQD_TKp6LcGZaMamJ24Z-c5jMXMGnYz8ZtRLuZX14n7T3U-PWmbKOeI-zuZ6wwWcwAlgLamIoM_wIpMnj6IC64Ka8WMyPyX5XgyJmVyDn5SnDfazLWlPynbcjWAA79ixxR19Y0dFulHckouEkG8LxggU_HBZOZtwtr6i3FFoAHbcHTpF8AORaj4QAqLvuzAMFIACEIl7bvlJ4tgA-LlF6jdRcfkpKjWElli62MQu8XUd0fY1hICDbyXzhO3JS2EhUsIWyuMlzS4O10s7yLcBligNHo9D5TOOal6SxpYEtiAdLMExS8FKIu7q0Q9l1SyZecvGt3gblmi_pc8t8Bo9qAbAZQnLl2NSA2FzNihZGNQByLUATCyxxIuOWfDRJmo7-xgnM9zuZQIOfwLO59YjW7o1yXglu4ACoLYAGCxQE7YhcsrVR1i0hPYtudotRARK4_JtZdXy0Ph7Vr1eSvUBis-MIOdReSEOTy5EALSUaz_6wyAByg2GL4RgEp6w20ErwflaoDoooA1V7eZtbKCWs0lwp_gEAA
+	请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    const IconMain =
+  'image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAsCAYAAAAacYo8AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKfSURBVHgB1ZlRbtpAEIb/MaEIqQ85Ar0BOUHdpxaeOEI5QdITlJ4g7QmanqB5apD6EHqC0hPER6BS1QhT73SGACHGNgteY/NJkay1vfk9O/vv7AIUSDeaDl5Hfy9QAISCeMP3PrF3q9dM5tWQmiM4pBDhIrq1EN1aNE1E/JmID+AID45JEK2capvPfApHOBdOqH3GU9FLWk2efYUjnArXyQhmP/0J9jscXsIBzoSraCa83/og84ULp3EyOdcdxJa8TpNbeMpktCGX0+RKlRyilVxOk0t4hoPYsrfT7JwqGqEmQl9ePc92kJ0YM9HHIT37YvuCtfAu/2nD1HvyxjnLMKMYAmKMjGc+bMv9TOEFRdcOopEE6CptFBKFHyi6tiSOwkp4qdG1ZW0U5sLF1t567F1WILq2BEs7DI5ItNKaC58vvWJHOBKYcbXK8Z7keMjh3RFEPtA6Z7VyXhNNDJl3qDiyUA3UXTbssGPCW62bUUE0RYa1Rl+vN2oVpqgvXzNBFREvX13G7+kwGELlJqpsUgaJC1Ccrgl/MriNahDceI0X6w2pZa2hqDITVV0k3pYqvCrebubl7malmLmRaKCukyFAeQTTBw0bZApXb5dh6qMk1LNHoiHpntVGomOmjBKQCZmqz/lJ1qGwE06l5HmQdbPKEc9cvS2FU4ADI4tffuG0pZMysBJuyii6OHuULSNOBxfOHuVPFS4hVehYc9zJ5JROfmMPdEOy76aE4GW+dwIHnTw+h4kBj4lwDdTG36j+Q9s7PHsJRG3ZevU8UNtmQ05bLNhKOMNI5DykCdUTJrk/WgqNc/PQrn+fsPgQ6dPXEzMR6GMPrIqsxQH+XVzoPU5+pVVvu5D0If9odvadno+RBz1z0c5d/k6Zhc3/+g/t7z/HozRCjAAAAABJRU5ErkJggg==';
+const IconPointer =
+  'path://M2.9,0.7L2.9,0.7c1.4,0,2.6,1.2,2.6,2.6v115c0,1.4-1.2,2.6-2.6,2.6l0,0c-1.4,0-2.6-1.2-2.6-2.6V3.3C0.3,1.9,1.4,0.7,2.9,0.7z';
+const IconWorn =
+  'image://data:image/png;base64,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';
+
+// const hours = ['12', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
+// prettier-ignore
+const level = [
+    '-', '-', '低',
+    '中', '高'
+];
+
+const data = [
+  [2, 10, 10],
+  [2, 11, 15],
+  [3, 0, 20],
+  [3, 1, 30],
+  [3, 8, 40],
+  [3, 11, 45],
+  [4, 0.2, 60],
+  [4, 1, 70],
+  [4, 5, 80],
+  [4, 9, 90],
+];
+option = {
+  visualMap: {
+    // type: 'continuous',
+    show: false,
+    min: 0,
+    max: 100,
+    dimension: 2,
+    // orient: 'horizontal',
+    right: 10,
+    top: 'center',
+    text: ['H', 'L'],
+    calculable: true,
+    inRange: {
+      // color: ['#0fc', '#fc0', '#f00']
+      color: ['#0f0', '#ff0', '#f00'],
+    },
+  },
+  tooltip: {
+    // position: 'top',
+    trigger: 'item',
+    // data: {
+    //   symbolRotate: 10
+    // },
+  },
+  polar: {
+    radius: [0, '85%'],
+  },
+  angleAxis: {
+    // type: 'time',
+    type: 'value',
+    // type: 'category',
+    // data: hours,
+    min: 0,
+    max: 12,
+    boundaryGap: false,
+    splitLine: {
+      show: false,
+    },
+    axisLine: {
+      show: false,
+    },
+    axisTick: {
+      show: false,
+    },
+    axisLabel: {
+      show: false,
+      // rotate: 45
+    },
+  },
+  radiusAxis: {
+    type: 'category',
+    data: level,
+    axisLine: {
+      show: false,
+    },
+    axisLabel: {
+      show: false,
+      // rotate: 45
+    },
+    axisTick: {
+      show: false,
+    },
+  },
+  series: [
+    {
+      name: '时钟表盘',
+      type: 'gauge',
+      radius: '95%',
+      startAngle: 90,
+      endAngle: -270,
+      min: 0,
+      max: 12,
+      splitNumber: 12,
+      clockwise: true,
+      axisLine: {
+        // show: false,  // 不能渐变色
+        lineStyle: {
+          width: 1,
+          color: [[1, 'rgba(41, 234, 230,0.3)']],
+        },
+      },
+      splitLine: {
+        length: 12,
+        distance: 28,
+        lineStyle: {
+          color: '#ddd',
+          width: 2,
+        },
+      },
+      axisLabel: {
+        fontSize: 16,
+        distance: -30,
+        rotate: -45,
+        formatter: function (value) {
+          if (value === 0) {
+            return '';
+          }
+          return value + '';
+        },
+      },
+      axisTick: {
+        distance: 32,
+        lineStyle: {
+          color: '#ddd',
+        },
+      },
+      pointer: {
+        show: false,
+      },
+      anchor: {
+        show: false,
+      },
+      detail: {
+        show: false,
+        precision: 1,
+      },
+      data: [
+        {
+          value: 0,
+        },
+      ],
+    },
+    {
+      name: '扫描指针',
+      type: 'gauge',
+      zlevel: 10,
+      radius: '85%',
+      startAngle: 90,
+      endAngle: -270,
+      min: 0,
+      max: 12,
+      animation: true,
+      // animationEasing: 'linear',
+      animationEasingUpdate: 'easing',
+      animationDuration: 3000,
+      animationDelay: 0,
+      animationDelayUpdate: 0,
+      clockwise: true,
+      axisLine: {
+        show: false,
+      },
+      splitLine: {
+        show: false,
+      },
+      axisTick: {
+        show: false,
+      },
+      axisLabel: {
+        show: false,
+      },
+      pointer: {
+        icon: IconPointer,
+        width: 2,
+        length: '100%',
+        // offsetCenter: [0, '8%'],
+        itemStyle: {
+          color: 'rgb(62, 234, 231)',
+        },
+      },
+      anchor: {
+        show: true,
+        size: 80,
+        showAbove: true,
+        icon: IconMain,
+        // showAbove: false,
+        // offsetCenter: [0, '-35%'],
+        // size: 2,
+        // keepAspect: true,
+      },
+      detail: {
+        show: false,
+        precision: 1,
+      },
+      // title: {
+      //   offsetCenter: [0, '30%']
+      // },
+      data: [
+        {
+          value: 0,
+        },
+      ],
+    },
+    {
+      type: 'sunburst',
+      radius: ['0%', '85%'],
+      // startAngle: 90,
+      // sort: undefined,
+      // emphasis: {
+      //   focus: 'ancestor'
+      // },
+      label: {
+        color: '#000',
+        borderWidth: 5,
+        // textBorderColor: '#fff',
+        // textBorderWidth: 2,
+        // offset: [300, 30]
+        // formatter: function (param) {
+        //   var depth = param.treePathInfo.length;
+        //   if (depth === 2) {
+        //     return '低';
+        //   } else if (depth === 3) {
+        //     return '中';
+        //   } else if (depth === 4) {
+        //     return '高';
+        //   }
+        //   return '';
+        // }
+      },
+      itemStyle: {
+        borderWidth: 2,
+        // borderType: 'dotted',
+      },
+      levels: [
+        {},
+        {
+          itemStyle: {
+            color: '#d9f3f3',
+          },
+          label: {
+            rotate: 'tangential',
+          },
+        },
+        {
+          itemStyle: {
+            color: '#d9f3f3',
+          },
+          label: {
+            rotate: 'tangential',
+          },
+        },
+        {
+          itemStyle: {
+            color: '#d9f3f3',
+          },
+          label: {
+            rotate: 'tangential',
+            color: '#0cf',
+          },
+        },
+        {
+          itemStyle: {
+            color: '#fcf8ec',
+          },
+          label: {
+            rotate: 'tangential',
+            color: '#fc0',
+          },
+        },
+        {
+          itemStyle: {
+            color: '#fdf0ec',
+          },
+          label: {
+            rotate: 'tangential',
+            // position: 'top',
+            // distance: 100,
+            color: '#f00',
+          },
+        },
+      ],
+      data: _sunset1(),
+    },
+    {
+      type: 'sunburst',
+      radius: ['0%', '85%'],
+      label: {
+        show: false,
+      },
+      tooltip: {
+        show: false,
+      },
+      itemStyle: {
+        color: 'transparent',
+        borderColor: '#fff',
+        borderWidth: 2,
+        borderType: 'dotted',
+      },
+      data: _sunset2(),
+    },
+    {
+      type: 'pie',
+      silent: true,
+      radius: ['85%', '84%'],
+      // startAngle: 50,
+      hoverAnimation: false,
+      animation: false,
+      // color: new echarts.graphic.LinearGradient(1, 0, 0, 1, [
+      //   { offset: 0, color: 'rgba(160, 236, 228, 0)' },
+      //   { offset: 0.3, color: 'rgba(160, 236, 228, 0.01)' },
+      //   { offset: 0.9, color: 'rgba(160, 236, 228, 1)' },
+      //   // { offset: 0, color: 'rgba(245, 140, 151, 0)' },
+      //   // { offset: 0.3, color: 'rgba(245, 140, 151, 0.1)' },
+      //   // { offset: 0.9, color: 'rgba(245, 140, 151, 1)' },
+      // ]),
+      labelLine: {
+        show: false,
+      },
+      data: _pie1(),
+    },
+    {
+      type: 'pie',
+      silent: true,
+      radius: ['90%', '91%'],
+      startAngle: 50,
+      hoverAnimation: false,
+      label: {
+        show: false,
+      },
+      labelLine: {
+        show: false,
+      },
+      data: _pie2(),
+    },
+    {
+      type: 'pie',
+      silent: true,
+      radius: ['88%', '87%'],
+      label: {
+        show: false,
+      },
+      labelLine: {
+        show: false,
+      },
+      data: _pie2(),
+    },
+    {
+      type: 'pie',
+      silent: true,
+      animation: false,
+      radius: ['54%', '53%'],
+      label: {
+        show: false,
+      },
+      labelLine: {
+        show: false,
+      },
+      data: _pie3(),
+    },
+    // {
+    //   name: '中间环形图',
+    //   type: 'pie',
+    //   radius: ['35%', '55%'],
+    //   avoidLabelOverlap: false,
+    //   hoverAnimation: false,
+    //   itemStyle: {
+    //     normal: {
+    //       color: '#80ADD2',
+    //       borderColor: '#3D4268'
+    //     }
+    //   },
+    //   label: {
+    //     normal: {
+    //       show: false,
+    //       position: 'center'
+    //     },
+    //     emphasis: {
+    //       show: true,
+    //       textStyle: {
+    //         fontSize: '30',
+    //         fontWeight: 'bold'
+    //       }
+    //     }
+    //   },
+    //   labelLine: {
+    //     normal: {
+    //       show: false
+    //     }
+    //   },
+    //   data: [1, 1, 1, 1, 1, 1,1,1]
+    // },
+    {
+      type: 'effectScatter',
+      name: '甲烷浓度超标',
+      coordinateSystem: 'polar',
+      // color: '#f00',
+      // symbolSize: function (val) {
+      //   return val[2] * 2;
+      // },
+      // tooltip: {
+      //   formatter: function (params) {
+      //   console.log(`🚀 ~ params`, params)
+      //     return (
+      //       params.value[2] +
+      //       ' commits in hours' +
+      //       hours[params.value[1]] +
+      //       ' of level' +
+      //       level[params.value[0]]
+      //     );
+      //   },
+      // },
+      tooltip: {
+        borderColor: 'rgba(230, 230, 230, 1)',
+        borderWidth: 1,
+        // formatter: '{a|{a} }{c|{c}}',
+        // formatter: '{a}<br />时间: {c}'
+        formatter: (params) => {
+          // console.log('params', params)
+          return (
+            '<p style="display: flex;flex-direction: row; align-item: center;margin-bottom:5px">' +
+            '<b style="box-sizing: border-box;width: 20px;height: 20px;background: #f00;border: 5px solid #fff;border-radius: 50%;"></b>' +
+            '<b style="margin-left: 6px;">' +
+            params.seriesName +
+            '</b></p>' +
+            '<p style="font-size: 12px; font-weight: normal; color: #666">浓度: ' +
+            // params.value[1] +
+            params.value[2] +
+            '</p>' +
+            '<p style="font-size: 12px; font-weight: normal; color: #666">时间: ' +
+            params.value[1] +
+            // hours[params.value[1]] +
+            '</p>'
+          );
+        },
+      },
+      data: data,
+      // animationDelay: function (idx) {
+      //   return idx * 5;
+      // }
+    },
+  ],
+};
+
+function _sunset1() {
+  return [
+    {
+      children: [
+        {
+          children: [
+            {
+              name: '低',
+              children: [
+                {
+                  name: '中',
+                  children: [
+                    {
+                      value: 1,
+                      name: '高',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      children: [
+        {
+          children: [
+            {
+              children: [
+                {
+                  children: [
+                    {
+                      value: 1,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      children: [
+        {
+          children: [
+            {
+              name: '<20%LEL',
+              children: [
+                {
+                  name: '20%LEL - 50%LEL',
+                  children: [
+                    {
+                      value: 1,
+                      name: '>50%LEL',
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      children: [
+        {
+          children: [
+            {
+              children: [
+                {
+                  children: [
+                    {
+                      value: 1,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+}
+
+function _sunset2() {
+  const ret = new Array(8);
+  const item = {
+    children: [
+      {
+        children: [
+          {
+            children: [
+              {
+                children: [
+                  {
+                    value: 1,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  ret.fill(item);
+  return ret;
+}
+
+function _pie1() {
+  return [
+    {
+      value: 1,
+      itemStyle: {
+        normal: {
+          // color: '#f00',
+          color: new echarts.graphic.LinearGradient(1, 0, 0, 1, [
+            { offset: 0, color: 'rgba(160, 236, 228, 0)' },
+            { offset: 0.3, color: 'rgba(160, 236, 228, 0.01)' },
+            { offset: 0.9, color: 'rgba(160, 236, 228, 1)' },
+            // { offset: 0, color: 'rgba(245, 140, 151, 0)' },
+            // { offset: 0.3, color: 'rgba(245, 140, 151, 0.1)' },
+            // { offset: 0.9, color: 'rgba(245, 140, 151, 1)' },
+          ]),
+        },
+      },
+    },
+  ];
+}
+
+function _pie2() {
+  let dataArr = [];
+  for (var i = 0; i < 8; i++) {
+    if (i % 2 === 0) {
+      dataArr.push({
+        name: (i + 1).toString(),
+        value: 25,
+        itemStyle: {
+          normal: {
+            color: 'rgba(88,142,197,0.08)',
+          },
+        },
+      });
+    } else {
+      dataArr.push({
+        name: (i + 1).toString(),
+        value: 20,
+        itemStyle: {
+          normal: {
+            color: 'rgba(0,0,0,0)',
+          },
+        },
+      });
+    }
+  }
+  return dataArr;
+}
+
+function _pie3() {
+  let dataArr = [];
+  for (var i = 0; i < 100; i++) {
+    if (i % 2 === 0) {
+      dataArr.push({
+        name: (i + 1).toString(),
+        value: 25,
+        itemStyle: {
+          normal: {
+            color: 'rgb(126,190,255, 0.2)',
+          },
+        },
+      });
+    } else {
+      dataArr.push({
+        name: (i + 1).toString(),
+        value: 20,
+        itemStyle: {
+          normal: {
+            color: 'rgba(0,0,0,0)',
+          },
+        },
+      });
+    }
+  }
+  return dataArr;
+}
+
+function scanning() {
+  let option = myChart.getOption();
+  const step = 3;
+  ang = (option.series[1].startAngle - step) % 360;
+  // console.log(ang);
+  option.series[1].animation = !!ang;
+  option.series[1].startAngle = ang;
+  // option.series[4].startAngle = ang;
+  // option.series[5].startAngle = ang * 2;
+  // option.series[6].startAngle = ang * 3;
+  // option.series[7].startAngle = ang * Math.random();
+  myChart.setOption(option);
+}
+
+function startTimer() {
+  timer = setInterval(scanning, 100);
+}
+
+// console.log('myChart', myChart);
+// myChart.getDom().style.transform = 'rotate(-45deg)';
+
+// setTimeout(startTimer, 500);
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
