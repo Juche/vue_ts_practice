@@ -12,9 +12,11 @@ export function getMousePos(): Pos {
   const x = ref(0);
   const y = ref(0);
 
-  function updatePos(ev: any): void {
-    x.value = ev.clientX;
-    y.value = ev.clientY;
+  function updatePos(ev: Event): void {
+    // x.value = (<MouseEvent>ev).clientX;
+    // y.value = (<MouseEvent>ev).clientY;
+    x.value = (ev as MouseEvent).clientX;
+    y.value = (ev as MouseEvent).clientY;
   }
 
   eventListen(window, 'mousemove', updatePos);
